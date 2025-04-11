@@ -1,20 +1,18 @@
 <template>
-  <button @click="reverse">reverse</button>
-  <p v-if="toggle">you can see</p>
-  <p>{{ toggle }}</p>
+  <p>{{ count }}</p>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      toggle: true
+      count: 1
     }
   },
-  methods: {
-    reverse() {
-      this.toggle = !this.toggle
-    }
+
+  mounted() {
+    console.log(this.count)
+    this.count = 2
   }
 }
 </script>
